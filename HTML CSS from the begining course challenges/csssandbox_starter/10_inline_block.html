@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Inline & Block Styling</title>
+  <style>
+    li{
+      display: inline;
+      
+    }
+    li a{
+      padding-right: 15px;
+    }
+    img{
+      /* for giving a margin to an element it must be an block level element   */
+      /* img is an inline element so giving it a margin we will make it block level element */
+      display: block;
+      margin: auto;
+    }
+    .box{
+      border:1px black solid;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #ddd;
+      width: 33%;
+      /* the inline property wont work on divs so we can use inline block which is the combination of inline and block property */
+      display: inline-block;
+      box-sizing: border-box;
+      
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li><a href="">Technology</a></li>
+    <li><a href="">Business</a></li>
+    <li><a href="">Fashion</a></li>
+  </ul>
+  <br><br>
+<img src="img/leaf.png" alt="leaf image">
+<br><br>
+
+<div class="box">
+  <h2>Box1</h2>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus hic aliquid pariatur explicabo voluptas officiis amet incidunt quibusdam rem, enim natus omnis perferendis assumenda eligendi.</p>
+</div>
+<div class="box">
+  <h2>Box2</h2>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus hic aliquid pariatur explicabo voluptas officiis amet incidunt quibusdam rem, enim natus omnis perferendis assumenda eligendi.</p>
+</div>
+<div class="box">
+  <h2>Box3</h2>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus hic aliquid pariatur explicabo voluptas officiis amet incidunt quibusdam rem, enim natus omnis perferendis assumenda eligendi.</p>
+</div>
+
+</body>
+</html>

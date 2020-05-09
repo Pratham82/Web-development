@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Menu Styling</title>
+  <style>
+    body{
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .nav-bar{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background: #4c6ac0;
+      border-radius: 5px;
+      overflow: auto;
+    }
+    .nav-bar li{
+      float: left;
+    }
+    .nav-bar li a{
+      color: white;
+      display:block;
+      text-decoration: none;
+      padding: 15px 20px;
+    }
+    .nav-bar li a:hover{
+      background-color: #446190;
+      color: #f4f4f4;
+    }
+    
+    .side-menu{
+      list-style: none;
+      border:2px #ddd solid;
+      border-radius: 10px;
+      width: 300px;
+      padding: 20px;
+    }
+    .side-menu li{
+      font-size: 18px;
+      line-height: 2.4em; 
+      border-bottom: 1px #ddd dotted;
+    }
+    .side-menu li:last-child{
+      border:none;
+    }
+    .side-menu a{
+      color: #333;
+      text-decoration: none;
+    }
+    .side-menu li a:hover{
+      color: chocolate;
+    }
+    .navbar2{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border-radius: 10px;
+      
+    }
+    .navbar2 li{
+      float: left;
+     
+    }
+    .navbar2 li a{
+      text-decoration: none;
+      padding: 10px 15px;
+      background-image: linear-gradient(45deg, white , blue);
+      color: white;
+    }
+    .navbar2 li a:hover{
+      background-image: linear-gradient(45deg,blue, white);
+      
+
+    }
+  </style>
+</head>
+<body>
+  
+  <ul class="nav-bar">
+    <li><a href="#">Home</a> </li>
+    <li><a href="#">About</a> </li>
+    <li><a href="#">Services</a> </li>
+    <li><a href="#">Contact</a> </li>
+    <li><a href="#">Get help</a> </li>
+  </ul>
+  <br><br>
+  
+  <ul class="side-menu">
+    <li><a href="#">Home</a> </li>
+    <li><a href="#">About</a> </li>
+    <li><a href="#">Services</a> </li>
+    <li><a href="#">Contact</a> </li>
+  </ul>
+  <br><br>
+  <ul class="navbar2">
+    <li><a href="#">Experience</a></li>
+    <li><a href="#">Skills</a></li>
+    <li><a href="#">Tech stack</a></li>
+    <li><a href="#">Github</a></li>
+    <li><a href="#">LikedIn</a></li>
+  </ul>
+ 
+  
+
+</body>
+</html>
