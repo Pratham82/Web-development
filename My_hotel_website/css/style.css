@@ -1,0 +1,69 @@
+/* Reset of all default styling */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main styling */
+html, body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7em;
+}
+
+a{
+    text-decoration: none;
+    
+}
+
+h1,h2,h3{
+    padding-bottom: 20px;
+}
+
+p{
+    margin:10px 0;
+}
+
+/* Utility class */
+.container{
+    margin: auto;
+    max-width: 1100px;
+    
+}
+
+
+/* Navbar styling */
+
+.nav-bar{
+    background-color: #333;
+    overflow: auto;
+}
+
+.nav-bar a{
+    color: white;
+}
+
+.nav-bar h1{
+    float: left;
+    padding-top:20px ;
+}
+
+.nav-bar ul{
+    float: right;
+    list-style: none;
+}
+
+.nav-bar ul li{
+    float: left;
+}
+
+.nav-bar ul li a{
+    display: block;
+    padding: 20px;
+    text-align: center;
+}
+
+.nav-bar ul li a:hover{
+    background-color: #444;
+    color: #f7c08a;
+}

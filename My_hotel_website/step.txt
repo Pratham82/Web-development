@@ -1,0 +1,13 @@
+Steps for creating a website
+1. get resources in one folder
+2. Dump images in one folder
+3. Create HTML files(landing page should be named index.html)
+4. Go form component to component do the HTML and create CSS
+5. In CSS first remove all default padding and margin
+6. Add box-sizing property to border box
+7. In CSS go to main styling where we change the property of html and body element(Font, line height)
+8. Removed link styling
+9. Added padding for h1,h2 ... elements
+10. Changed background color of header
+11. Positioned h1 and nav elements using floats
+12. 
