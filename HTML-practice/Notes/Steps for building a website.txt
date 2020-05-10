@@ -1,0 +1,33 @@
+1. Define you project:
+    Define the goal of you project
+    Define your audience
+    Design with you goal and audience in mind
+
+2. Plan out your content
+    Plan your context: txt, images, videos and icons
+    Start thinking about visual hierarchy
+    Define the navigation
+    Define the site structure if its a big project
+
+3. Sketch your ideas before you Design
+    Get inspired and think about your Design
+    Get th ideas out of your head: sketch your ideas before designing
+    Make as many sketches as you want but don't make it perfect 
+    Never start designing without having an idea og what you want to build
+
+4. Design and deploy your website 
+    Design your website using guidelines and tips you have learned in web design sections.
+    Do that using HTML and CSS designing in the browser
+    Use sketches, content and planning decisions you've made in steps 1,2 and 3
+    This step is most important
+
+5. Optimization
+    Optimization performance: site speed 
+    Search engine Optimization(SEO)
+
+6. All you need for launching is web server that will host your website and deliver it to the world
+
+7. Site maintenance
+    Launching is not the end of the story
+    Monitor your users behavior and change your website if necessary
+    Update your content regularly: blog
