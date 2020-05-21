@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em and rem units</title>
+    <!-- em styling
+        <style>
+        #box-1{
+            /* The actual computed font size will become 23.4 i.e(20 x 1.17em) */
+            font-size:20px;
+        }
+        #box-1 p{
+            /* The computed size for p will become 30px i.e(20 x 1.5em) */
+            font-size: 1.5em;
+            /* When we change the padding it is suppose to be 20 px because (20 x 1em)
+            but actually it gets 30px because we changed the font size in p element to 1.5em*/
+            padding: 1em;
+        }
+        #box-1 ul{
+            /* in this example the nested list is much bigger than the outer list because the inner element 
+            is going on with the parent element size*/
+            font-size: 1.2em;
+        } */
+    </style> -->
+
+    <!-- To overcome the issues with the em we chose to use rem units for styling -->
+    <style>
+        html{
+            /* In the rem units every element's size is based on the size of this root element  */
+               font-size:62.5% ; /*2.5%==10px */
+        }
+        #box-2 h3{
+            font-size: 2.3rem;
+        }
+        #box-2 p{
+            font-size: 1rem;
+            line-height: 1.7rem;
+        }
+    </style>
+
+</head>
+<body>
+    <!--1.  em unit is a multiplier relative to the font size of its parent element/container
+        2. rem unit is a multiplier relative to the font size of its root html element/container
+        3. If we don't provide any font size to our parent element then the child element will get 
+           the same properties as root html element  
+        4. By default font size of root html element is 16px == 1em
+        5. By default font size of 'h1' element is 18.72px == 1.17em -->
+
+        <!-- Styled by ems -->
+        <!-- <div id="box-1">
+            <h3>Box 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut illo suscipit reprehenderit quasi aliquid in harum sit eius repudiandae assumenda repellendus, ducimus et saepe, explicabo nihil odio soluta. Magni, mollitia?</p>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3
+                    <ul><li>1</li>
+                    <li>2</li>
+                    <li>3</li></ul>
+                </li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </div> -->
+        <div id="box-2">
+            <h3>Box 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut illo suscipit reprehenderit quasi aliquid in harum sit eius repudiandae assumenda repellendus, ducimus et saepe, explicabo nihil odio soluta. Magni, mollitia?</p>
+        </div>
+    
+</body>
+</html>

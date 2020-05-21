@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- viewport height and viewport width -->
+    <!-- viewport is the whole area inside the browser body-->
+    <!-- if we set 50vh it is equal to 50 of and 100vh -->
+    <!-- It doesn't matter the screen size the screen will be always 100vh and 100vw -->
+    <!-- We can set our content to take specific amount of vh or vw -->
+    <title>vh and vw</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Ubuntu', sans-serif;
+            
+            height: 100vh;
+        }
+
+        header{ 
+            /* background: rgb(218, 218, 218); */
+            background: #333 url(https://source.unsplash.com/daily) no-repeat center center/cover;
+            /* if we set the height to 100% then it will only apply to header and not actually whole body */
+            /* height: 100%; */
+            /* for affecting whole body we have to use vh */
+            color: white;
+            height: 100vh;
+            text-align: center;
+            padding: 2rem;
+            padding-top: 15rem;            
+        }
+
+        header h1{
+            font-size: 3rem;
+        }
+
+        header p{
+            margin: 1rem 1rem;
+        }
+
+        .btn{
+            display: inline-block;
+            text-decoration: none;
+            color: grey;
+            background: #fff;
+            padding: 0.5rem; 
+            transition: 0.3s;  
+        }
+        .btn:hover{
+            transform: scale(0.99);
+            background: rgb(216, 22, 22);
+            color: white;
+        }
+
+        @media (max-height: 450px){
+            header{
+                padding-top: 5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to bonanza</h1>
+        <div class="col"></div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore nihil tempore quod praesentium, fugit explicabo nam cumque atque omnis eius.</p>
+        <a href="" class="btn">Find more</a>
+    </header>
+    <section>
+        <h1>Section 2</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet reprehenderit dolorum saepe, harum vero id alias ab! Ullam, totam corporis!</p>
+    </section>
+</body>
+</html>

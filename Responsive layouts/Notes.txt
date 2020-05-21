@@ -1,0 +1,6 @@
+Responsive design practices to use:
+1 .Set the viewport/scale 
+2. Use fluid widths as oppose to fixed
+3. Media queries-  different css styling for different screen sizes
+4. Rem units over px
+5. Mobile first method
