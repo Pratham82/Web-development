@@ -1,0 +1,5 @@
+1. Flexbox introduced in CSS3
+2. "flex" is value for display property
+3. Replaces  floats and is much more elegant to work with align items
+4. Align items both horizontal(row) and vertical(column)
+5. Flex items can be reordered via CSS

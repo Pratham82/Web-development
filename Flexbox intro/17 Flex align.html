@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex align</title>
+    <style>
+        #container{
+            display: flex;
+
+            /* align items horizontally */
+            justify-content: space-evenly ;
+            /* options:
+                 center;   Pack items around the center 
+                 start;       Pack items from the start 
+                 end;         Pack items from the end 
+                 flex-start;  Pack flex items from the start 
+                 flex-end;    Pack flex items from the end 
+                 left;        Pack items from the left 
+                 right;       Pack items from the right  */
+            background-color: grey;
+            
+            /* You should always provide height */
+            height: 700px;
+
+            /* align items vertical */
+            align-items: center;
+            flex-wrap: wrap;
+
+            /* Align items vertically where extra space */
+            align-content: space-around;
+        }
+        .item{
+            padding: 1rem;
+            background-color: beige;
+            color: rgb(131, 122, 122);
+            border: 0.1rem solid rgb(131, 122, 122);
+            text-align: center;
+            margin: 0.4rem;
+            padding: 4rem;
+            flex-basis: 100px;
+        }
+         /* Align single elements */
+        .item2{
+            align-self: flex-end;
+            
+        }
+
+        /* order item */
+        .item1{
+            order: 4;
+            
+        }
+        .item2{
+            order: 3;
+            
+        }
+        .item3{
+            order: 2;
+            
+        }
+        .item4{
+            order: 1;
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        
+        <div class="item item1"><h3>Item 1</h3></div>
+        <div class="item item2"><h3>Item 2</h3></div>
+        <div class="item item3"><h3>Item 3</h3></div>
+        <div class="item item4"><h3>Item 4</h3></div>
+        <div class="item item5"><h3>Item 5</h3></div>
+        <div class="item item6"><h3>Item 6</h3></div>
+        <div class="item item7"><h3>Item 7</h3></div>
+        <div class="item item8"><h3>Item 8</h3></div>
+        <div class="item item9"><h3>Item 9</h3></div>
+        <div class="item item10"><h3>Item 10</h3></div>
+        <div class="item item11"><h3>Item 11</h3></div>
+        <div class="item item12"><h3>Item 12</h3></div>
+        
+    </div>
+</body>
+</html>
