@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and after</title>
+    <style>
+        .is-required:after{
+            content: '*';
+            color: red;
+            padding-left: 0.25rem;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: rgb(87, 86, 85);
+            color: aliceblue;
+            margin: 0;
+        }
+        header{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+           
+            
+        }
+
+        /* only targeting the bg image and reducing its opacity */
+        header:before{
+            content: '';
+            background: url(https://source.unsplash.com/1600x900/?nature,water)no-repeat center center/cover;
+            opacity: 0.6;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+
+        header > h1{
+            font-size: 3rem;
+            margin: 1rem ;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- <label class="is-required" for="name">Name</label>
+    <input type="text"> -->
+
+    <header>
+        <h1>Hi this is my landing page</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, voluptatibus.</p>
+    </header>
+
+    <section>
+        <h3>Lorem ipsum dolor sit amet.</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aut eos totam recusandae? Quod deleniti velit molestiae et tempora ratione vel fugit ipsam, culpa alias.</p>
+    </section>
+
+</body>
+</html>
