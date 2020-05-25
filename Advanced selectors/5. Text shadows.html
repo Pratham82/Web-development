@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text shadow</title>
+    <style>
+        body{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 2rem;
+        }
+        h1.c-1{
+            /* horizontal shadow| vertical shadow |color  */
+            text-shadow: 0.2rem 0.2rem rgb(172, 172, 173);
+        }
+        h1.c-2{
+            /* horizontal shadow| vertical shadow |blur |color  */
+            text-shadow: 0.3rem 0.3rem 0.5rem rgb(172, 172, 173);
+        }
+        h1.c-3{
+            
+            /* White text */
+            color: white ;
+            text-shadow: 0.3rem 0.3rem 0.5rem rgb(29, 65, 82);
+        }
+        h1.c-4{
+            /* negative values */
+            text-shadow: -0.3rem -0.5rem 0.5rem rgb(172, 172, 173);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="c-1">Hi this is tag 1</h1>
+    <h1 class="c-2">Hi this is tag 2</h1>
+    <h1 class="c-3">Hi this is tag 3</h1>
+    <h1 class="c-4">Hi this is tag 4</h1>
+</body>
+</html>
