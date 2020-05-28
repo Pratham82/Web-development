@@ -1,0 +1,120 @@
+*{
+   
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --page-1-color: rgb(1, 117, 163);
+    --page-2-color: rgb(18, 52, 126);
+    --page-3-color: rgb(5, 128, 41);
+    --page-4-color: rgb(78, 0, 141);
+    --animate-speed:1.5s;
+}
+
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.4;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+/* page colors */
+
+#page-1{
+    background: var(--page-1-color);
+}
+#page-2{
+    background: var(--page-2-color);
+}
+#page-3{
+    background: var(--page-3-color);
+}
+#page-4{
+    background: var(--page-4-color);
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 30px;
+}
+
+.page h1{
+    font-size: 3.5rem;
+    margin: 0.5rem 0;
+}
+.page p{
+    font-size: 1.5rem;
+}
+
+.page .btn{
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background-color: white;
+    text-decoration: none;
+    margin: 0.5rem 0.3rem;
+    font-size: 1.3rem;
+    transition: all 0.5s ;
+    border-radius: 5px;
+    color: black;
+}
+
+.page .btn:hover{
+    background-color: rgb(17, 17, 17);
+    color: white;
+}
+
+.page .btn-dark{
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+}
+
+.page .btn-dark:hover{
+    background-color: rgb(248, 248, 248);
+    color: rgb(0, 0, 0);
+}
+
+/* Animation page*/
+
+#page-1 h1{
+    transform: translateY(-1200px);
+    animation: a1 var(--animate-speed) forwards ease-in;
+}
+
+@keyframes a1{
+    to{
+        transform: translateY(0);
+    }
+    
+}
+#page-1 p{
+    transform: translateX(1900px);
+    animation: a2 var(--animate-speed) forwards ease-in;
+}
+
+@keyframes a2{
+    to{
+        transform: translateY(0);
+    }
+    
+}
+#page-1 .btn{
+    transform: translateY(1900px);
+    animation: a3 2s forwards ease-in;
+}
+
+@keyframes a3{
+    to{
+        transform: translateY(0);
+    }
+    
+}
+
