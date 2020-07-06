@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,500&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Rubik", sans-serif;
+}
+/*Change scroll bar color*/
+html {
+	--scrollbarBG: #f0f1f1;
+	--thumbBG: #f59ca3;
+}
+body::-webkit-scrollbar {
+	width: 11px;
+}
+body {
+	scrollbar-width: thin;
+	scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+	background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+	background-color: var(--thumbBG);
+	border-radius: 6px;
+	border: 3px solid var(--scrollbarBG);
+}
+
+/*Change scroll bar color*/
+:root {
+	--primary-color: rgb(245, 65, 89);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+/*Header area*/
+.header-area {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 120px;
+	width: 100%;
+	padding: 30px;
+	/* Very important*/
+	position: fixed;
+	/* background-color: rgba(233, 212, 215, 0.192); */
+}
+
+.logo {
+	display: block;
+	height: 90px;
+	width: 90px;
+	padding: 5px;
+}
+
+/*Navigation menu*/
+.nav {
+	display: flex;
+}
+
+li,
+a,
+button {
+	text-decoration: none;
+	list-style: none;
+	font-family: "Rubik", sans-serif;
+}
+/* For moving the li items in same line*/
+.nav li,
+a {
+	display: inline-block;
+	text-decoration: none;
+	font-size: 17.5px;
+	font-weight: 500;
+	padding: 8px;
+	color: var(--primary-color);
+}
+
+/** Main page*/
+#img-1 {
+	padding: 10px;
+	height: 500px;
+	width: 800px;
+}
+.container {
+	display: flex;
+	justify-content: space-evenly;
+	height: 100vh;
+	width: 100vw;
+}
+
+.cta {
+	display: flex;
+	padding: 10px;
+	flex-direction: column;
+
+	justify-content: center;
+}
+.cta h1 {
+	font-size: 40px;
+	font-weight: 400;
+	margin: 20px 50px;
+}
+
+.image-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.primary-color {
+	color: var(--primary-color);
+}
+
+.cta #ctaBtn {
+	font-family: "Rubik", sans-serif;
+	font-size: 23px;
+	padding: 10px 10px;
+	width: 180px;
+	color: white;
+	background-color: var(--primary-color);
+	border: 0px;
+	border-radius: 28px 28px 28px 28px;
+	cursor: pointer;
+	margin: 20px 50px;
+	box-shadow: 2px 11px 33px -16px rgba(0, 0, 0, 0.75);
+	outline: none;
+
+	transition: 0.7s;
+}
+
+.cta #ctaBtn:hover {
+	background-color: rgb(252, 98, 124);
+	width: 180px;
+	color: rgb(250, 250, 250);
+	transform: scale(0.97);
+	box-shadow: none;
+}
+
+/*How it works*/
+
+.how-it-works {
+	width: 100vw;
+	height: 100vh;
+	background-color: pink;
+}
+.Features {
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(88, 98, 247);
+}
+.Company {
+	width: 100vw;
+	height: 100vh;
+	background-color: pink;
+}
