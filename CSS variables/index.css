@@ -1,0 +1,94 @@
+/*Declaring common colors as global variables in the root so all the variables will be available everywhere*/
+
+/* Variable declaration */
+:root {
+	--red: #ff6f69;
+	--beige: #ffeead;
+	--yellow: #ffcc5c;
+	/*We can reassign the variable's based on another variables
+	We can refer to red color as main-color
+	*/
+
+	--main-color: var(--red);
+}
+
+.grid {
+	--columns: 200px 200px;
+}
+
+/* Styles */
+html,
+body {
+	font-family: Arial;
+	background-color: var(--beige);
+	color: var(--red);
+}
+
+/*
+Local Scope
+* We can declare the variables locally, instead of declaring them inside the root
+* Here the --nav-red color is "only available for the navbar"
+* --nav-red won't work for any other elements outside the navbar class
+*/
+/* #navbar {
+	--nav-red: #c52b00;
+} */
+
+h1,
+p {
+	color: var(--red);
+}
+
+#navbar {
+	--main-color: grey;
+}
+
+#navbar a {
+	color: var(--red);
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: var(--columns);
+	grid-auto-rows: 140px;
+	grid-gap: 20px;
+	justify-content: center;
+}
+
+/* 
+* Overriding variables:
+* We have updated the values which has provided in the root and gave red var new value
+* Here we overridden red color in the .item element so it will changed for the item element and all of it s child
+* Out of the "item" scope the red color will be same.
+*/
+
+.item {
+	/* --red: #ff8e69; */
+	/* --item-yellow: rgb(247, 244, 75); */
+	background-color: var(--yellow);
+}
+
+button {
+	background-color: var(--red);
+	color: var(--yellow);
+}
+
+/*
+* Adding themes to specific component
+* Now the element with the featured class will be stand out from other elements
+* The yellow and red variables now refers to the currently added values for these variables
+*/
+
+/* .featured {
+	--yellow: #ffe55b;
+	--red: #ff5564;
+} */
+
+@media all and (max-width: 600px) {
+	.grid {
+		--columns: 200px;
+	}
+	:root {
+		--beige: rgb(248, 234, 109);
+	}
+}
