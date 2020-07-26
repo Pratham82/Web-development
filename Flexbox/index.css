@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #ffeead;
+  --secondary-color: #96ceb4;
+  --ternary-color: #df4632;
+  --text-color: #ffeead;
+}
+
+.container {
+  list-style: none;
+  font-size: 2em;
+  margin: 10px;
+  text-align: center;
+  color: var(--text-color);
+  border: 10px #fdbc07 solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*
+* Section - I
+--------------------------
+Default direction in flex is from left to right in a "row",
+* It is called "main axis" which goes from the (left to right) in the (form of row)
+
+* Two Axis in flex box:
+* Main axis(X axis): goes from left to right in a row (horizontally)
+* axis(X axis): goes from top to bottom in a column (vertically)
+
+* We can change the direction of flex
+* By default it is set to row
+*/
+/*
+* Section - II
+--------------------------
+* Justify content(Controls the content along the main axis i.e "row" )
+
+* By default it is set to flex start(thats why the content is squeezed together at the start)
+
+* Properties of justify content:
+1. flex-start
+2. flex-end
+3. center
+4. space-around
+5. space-evenly
+6. space-between
+*/
+/*
+* Section III
+--------------------------
+* Positioning items
+
+* For targeting a specific component we have to use declare thr child element with the a certain class
+
+*/
+.home,
+.logout {
+  background-color: var(--secondary-color);
+  padding: 10px;
+}
+
+.search,
+.profile {
+  background-color: var(--ternary-color);
+  padding: 10px;
+}
+
+/*
+* Section - IV
+--------------------------
+* Flex property(It allows to set the width of the items according to the width of the entire container, which makes the items responsive)
+
+
+*/
+/*
+* Section - V
+--------------------------
+* Align items(Control the content along the cross axis)
+* By default the items stretch themselves across the cross axis
+*/
+.container {
+  height: 100vh;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logout {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.home {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: Dank mono;
+  font-weight: 500;
+}
+/*# sourceMappingURL=index.css.map */

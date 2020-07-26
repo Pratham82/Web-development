@@ -1,0 +1,138 @@
+.container {
+	list-style: none;
+	font-size: 2em;
+	margin: 10px;
+	text-align: center;
+	color: var(--text-color);
+	border: 10px rgb(253, 188, 7) solid;
+
+	//*Flex Styling */
+	display: flex;
+	// flex-direction: row;
+	// justify-content: flex-end;
+}
+
+/*
+* Section - I
+--------------------------
+Default direction in flex is from left to right in a "row",
+* It is called "main axis" which goes from the (left to right) in the (form of row)
+
+* Two Axis in flex box:
+* Main axis(X axis): goes from left to right in a row (horizontally)
+* axis(X axis): goes from top to bottom in a column (vertically)
+
+* We can change the direction of flex
+* By default it is set to row
+*/
+
+/*
+* Section - II
+--------------------------
+* Justify content(Controls the content along the main axis i.e "row" )
+
+* By default it is set to flex start(thats why the content is squeezed together at the start)
+
+* Properties of justify content:
+1. flex-start
+2. flex-end
+3. center
+4. space-around
+5. space-evenly
+6. space-between
+*/
+
+/*
+* Section III
+--------------------------
+* Positioning items
+
+* For targeting a specific component we have to use declare thr child element with the a certain class
+
+*/
+
+.home,
+.logout {
+	background-color: var(--secondary-color);
+	padding: 10px;
+}
+
+.search,
+.profile {
+	background-color: var(--ternary-color);
+	padding: 10px;
+}
+
+//this will push the logout to the right side of the screen and gives the automatic margin
+// .logout {
+// 	margin-left: auto;
+// }
+
+// If we want to move two items which are adjacent then we can target the element which is before the next element, so we can remove the margin from the logout element
+
+// .search {
+// 	margin-left: auto;
+// }
+
+// .home {
+// 	margin-right: auto;
+// }
+
+/*
+* Section - IV
+--------------------------
+* Flex property(It allows to set the width of the items according to the width of the entire container, which makes the items responsive)
+
+
+*/
+
+//* If we want ot stretch the items across the whole container we can use the flex properties on the child elements
+
+//* so it doesn't matter how many child elements we add into the container all of them will be stretched evenly because we gave them value of flex 1
+// .container > div {
+// 	flex: 1;
+// }
+
+//* If we want one of the child element has double the width of other elements then we can target that element and add "flex :2" so it will be doubled in the width
+
+//* The best use case is only flexing one element rather applying flex to multiple child elements
+// .search {
+// 	flex: 2;
+// }
+
+// For making opposite of the above setup we can add the flex:2/ flex:1 to home and logout, so the
+// .home,
+// .logout {
+// 	flex: 1;
+// }
+
+/*
+* Section - V
+--------------------------
+* Align items(Control the content along the cross axis)
+* By default the items stretch themselves across the cross axis
+*/
+
+.container {
+	//* Cross axis
+	height: 100vh;
+	align-items: flex-start;
+	align-items: center;
+}
+
+// //* For centering an element we can use both align item and justify content property which makes centering an element very easy:
+
+// // For centering a div/ element
+// .container {
+// 	align-items: center;
+// 	justify-content: center;
+// }
+
+//* Target a specific element
+
+.logout {
+	align-self: flex-start;
+}
+.home {
+	align-self: flex-end;
+}
