@@ -1,0 +1,13 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+:root {
+	--primary-color: #ffeead;
+	--secondary-color: #96ceb4;
+	--ternary-color: #df4632;
+	--text-color: #ffeead;
+}
+
+@import "container";
