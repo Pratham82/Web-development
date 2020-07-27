@@ -54,12 +54,15 @@ Default direction in flex is from left to right in a "row",
 .home,
 .logout {
 	background-color: var(--secondary-color);
+	margin: 2px;
 	padding: 10px;
 }
 
 .search,
 .profile {
 	background-color: var(--ternary-color);
+
+	margin: 2px;
 	padding: 10px;
 }
 
@@ -113,12 +116,12 @@ Default direction in flex is from left to right in a "row",
 * By default the items stretch themselves across the cross axis
 */
 
-.container {
-	//* Cross axis
-	height: 100vh;
-	align-items: flex-start;
-	align-items: center;
-}
+// .container {
+// 	//* Cross axis
+// 	height: 100vh;
+// 	align-items: flex-start;
+// 	align-items: center;
+// }
 
 // //* For centering an element we can use both align item and justify content property which makes centering an element very easy:
 
@@ -130,9 +133,48 @@ Default direction in flex is from left to right in a "row",
 
 //* Target a specific element
 
-.logout {
-	align-self: flex-start;
+// .logout {
+// 	align-self: flex-start;
+// }
+// .home {
+// 	align-self: flex-end;
+// }
+
+/*
+* Section - VI
+--------------------------
+* Flex-direction:column
+* Lays out the content in the container from top to bottom
+* Now the axis is from top to bottom
+* By default align items is set to stretch 
+
+*/
+
+// .container {
+// 	flex-direction: column;
+// 	justify-content: center; //align the item on the y axis i.e from top to bottom
+// 	align-items: flex-end; // pushes the items to the end (right side of the page)
+// 	align-items: flex-start; // pushes the items to the start (left side of the page)
+// 	align-items: center; // pushes the items to the center (center of the page)
+
+// 	// for bottom right corner
+// 	align-items: flex-end;
+// 	justify-content: flex-end;
+// 	height: 100%;
+// }
+
+/*
+* Section - VII
+--------------------------
+* Wrapping
+* By default wrap is set to no-wrap
+
+*/
+
+.container {
+	flex-wrap: wrap; // Now if the child div doest not fit in the container provided then it wraps and goes to the new line
 }
-.home {
-	align-self: flex-end;
+
+.container > div {
+	width: 300px;
 }

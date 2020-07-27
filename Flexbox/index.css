@@ -61,12 +61,14 @@ Default direction in flex is from left to right in a "row",
 .home,
 .logout {
   background-color: var(--secondary-color);
+  margin: 2px;
   padding: 10px;
 }
 
 .search,
 .profile {
   background-color: var(--ternary-color);
+  margin: 2px;
   padding: 10px;
 }
 
@@ -83,29 +85,137 @@ Default direction in flex is from left to right in a "row",
 * Align items(Control the content along the cross axis)
 * By default the items stretch themselves across the cross axis
 */
+/*
+* Section - VI
+--------------------------
+* Flex-direction:column
+* Lays out the content in the container from top to bottom
+* Now the axis is from top to bottom
+* By default align items is set to stretch 
+
+*/
+/*
+* Section - VII
+--------------------------
+* Wrapping
+* By default wrap is set to no-wrap
+
+*/
 .container {
-  height: 100vh;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.logout {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+.container > div {
+  width: 300px;
 }
 
-.home {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+.container-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 10px solid #198af3;
+  margin: 10px;
+  margin-top: 50px;
 }
 
+/*
+* Section - VIII 
+--------------------------
+* flex: It is shorthand property for three other properties
+* Other three properties:
+* 1) flex grow, 2) flex-shrink 3) flex-basis 
+* By default wrap is set to no-wrap
+
+
+*/
+.container-2 > div {
+  font-size: 30px;
+  padding: 10px;
+  margin: 2px;
+  text-align: center;
+}
+
+.container-2 .player-1 {
+  background-color: var(--secondary-color);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 200px;
+          flex: 1 1 200px;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -ms-flex-preferred-size: 200px;
+      flex-basis: 200px;
+}
+
+.container-2 .player-2 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 200px;
+          flex: 1 1 200px;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  background-color: var(--ternary-color);
+  -ms-flex-preferred-size: 200px;
+      flex-basis: 200px;
+}
+
+.container-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 10px solid #198af3;
+  margin: 10px;
+  margin-top: 50px;
+}
+
+.container-3 > div {
+  font-size: 30px;
+  padding: 10px;
+  margin: 2px;
+  text-align: center;
+}
+
+/*
+* Section - IX
+* Order property: 
+* by default the order property is set to 0
+* If we set the order property to greater than 0  then the item will be pushed to the end of the container
+* If we set the order property to lesser than 0  then the item will be pushed to the start of the container 
+*/
+.container-3 .item-1 {
+  background-color: var(--secondary-color);
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
+.container-3 .item-2 {
+  background-color: var(--ternary-color);
+  -webkit-box-ordinal-group: -1;
+      -ms-flex-order: -2;
+          order: -2;
+}
+
+.container-3 .item-3 {
+  background-color: var(--secondary-color);
+  -webkit-box-ordinal-group: -2;
+      -ms-flex-order: -3;
+          order: -3;
+}
+
+html,
 body {
+  height: 100%;
   background-color: var(--primary-color);
   font-family: Dank mono;
   font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
 }
 /*# sourceMappingURL=index.css.map */
