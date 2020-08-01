@@ -1,0 +1,21 @@
+:root {
+	--bg-light: white;
+	--bg-primary: #ffeead;
+	--bg-primary-darker: #ffcc5c;
+	--bg-secondary: #88d8b0;
+	--text-red: #ff6f69;
+}
+
+@import "./basic";
+@import "./examples";
+@import "./main";
+@import "./container";
+
+// Style Reset
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+}

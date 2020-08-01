@@ -1,0 +1,70 @@
+/* basic styling */
+.header {
+	background-color: var(--bg-secondary);
+}
+
+.menu {
+	background-color: var(--text-red);
+}
+
+.content {
+	background-color: var(--bg-primary-darker);
+}
+
+.footer {
+	background-color: var(--bg-secondary);
+}
+
+.title {
+	color: var(--text-red);
+	background-color: var(--bg-secondary);
+	text-align: center;
+	padding: 30px 0 10px;
+	margin: 0px;
+}
+
+.wrapper > div {
+	padding-left: 20px;
+	color: var(--bg-secondary);
+	display: flex;
+	align-items: center;
+	font-size: 20px;
+}
+
+.row > div {
+	padding-left: 20px;
+	color: var(--bg-primary);
+	display: flex;
+	align-items: center;
+	font-size: 20px;
+}
+
+.row > .content {
+	height: 100px;
+}
+
+html {
+	padding: 0 10px;
+	margin: 0 10px;
+}
+
+body > .row {
+	margin: 0px;
+}
+
+.row > .menu {
+	height: 100px;
+}
+
+.row > .header {
+	height: 40px;
+}
+
+.row > .footer {
+	height: 40px;
+}
+
+html,
+body {
+	background: var(--bg-primary);
+}
