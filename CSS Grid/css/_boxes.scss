@@ -1,0 +1,52 @@
+body,
+html {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.outer-box {
+	margin: 10px;
+	display: grid;
+	grid-gap: 5px;
+
+	//* before
+	grid-template-columns: repeat(auto-fit, 100px);
+
+	//* after (using auto-fit and minmax we can change the gird size according to the screen,item column height will always be 100px or 1fr if gone out 600px)
+	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+
+	// grid-template-rows: repeat(2, 100px);
+
+	//* For managing the items which are past the 2 row mark  we will set an automatic row height
+	//*  If we use this property then we don't have to define the "grid-template-rows" above, rows will be managed automatically
+
+	grid-auto-rows: 100px;
+}
+
+.outer-box > div {
+	// text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2em;
+
+	background-color: var(--bg-secondary);
+	color: var(--bg-primary);
+}
+
+.outer-box > div:nth-child(1n) {
+	background-color: var(--bg-secondary);
+}
+
+.outer-box > div:nth-child(3n) {
+	background-color: var(--bg-secondary);
+}
+
+.outer-box > div:nth-child(2n) {
+	background-color: var(--text-red);
+}
+
+.outer-box > div:nth-child(4n) {
+	background-color: var(--bg-primary-darker);
+}

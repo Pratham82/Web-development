@@ -1,0 +1,49 @@
+body,
+html {
+	background-color: var(--bg-primary);
+	height: 100%;
+}
+
+.container3 > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--bg-primary);
+	font-size: 2em;
+}
+
+.container3 {
+	margin: 10px;
+	display: grid;
+	gap: 5px;
+	grid-template-columns: [main-start]1fr [content-start] 5fr [content-end main-end];
+	grid-template-rows: [main-start]40px [content-start]400px [content-end] 40px[main-end];
+}
+
+.header3 {
+	background-color: var(--bg-secondary);
+	// grid-column: span 1/-1;
+	// grid-column: main-start/main-end;
+	grid-column: main;
+}
+
+.menu3 {
+	background-color: var(--text-red);
+	// grid-column: 1/3;
+	// grid-column: span 1;
+}
+.content3 {
+	background-color: var(--bg-secondary);
+	// grid-column: 2/3;
+	// grid-column: content-start/content-end;
+	// grid-column: content;
+
+	//* Grid area only works here because it has to boxed in by 4 main lines
+	grid-area: content;
+}
+.footer3 {
+	background-color: var(--bg-primary-darker);
+	// grid-column: span 2;
+	// grid-column: main-start/main-end;
+	grid-column: main;
+}
