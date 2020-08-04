@@ -1,0 +1,43 @@
+.images-container {
+	margin: 10px;
+	display: grid;
+	grid-gap: 5px;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	grid-auto-rows: 80px;
+}
+
+.images-container > div > img {
+	width: 100%;
+	height: 100%;
+	border: solid rgb(247, 172, 11) 4px;
+}
+
+.horizontal {
+	// Following properties will span the images within class horizontal div doubled in width
+	// grid-column: 1/ span 2;
+	// grid-column: auto/ span 2;
+	grid-column: span 2;
+}
+
+.vertical {
+	// Following properties will span the images within class vertical div double in height
+	// grid-column: 1/ span 2;
+	// grid-column: auto/ span 2;
+	grid-row: span 2;
+}
+
+.big {
+	// Following properties will span the images within class big div double in in height and double in width
+	// grid-column: 1/ span 2;
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+//* Removing blank spots
+.images-container {
+	//* By default it is set to row
+	//* For filling the gap we can use dense property so the element with the appropriate width and height will fills the empty spots
+	grid-auto-flow: dense;
+
+	//* Dense feature is an example of sort order source order independence, it means that the grid can arrange the items regardless of how they laid out in the markup
+}

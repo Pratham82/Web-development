@@ -1,0 +1,21 @@
+:root {
+	--bg-light: white;
+	--bg-primary: #ffeead;
+	--bg-primary-darker: #ffcc5c;
+	--bg-secondary: #88d8b0;
+	--text-red: #ff6f69;
+}
+
+//reset
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body,
+html {
+	background-color: var(--bg-primary);
+}
+
+@import "images-container";
