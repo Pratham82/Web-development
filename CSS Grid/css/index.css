@@ -269,34 +269,49 @@ body {
 }
 
 .container2 {
+  height: 100vh;
   display: -ms-grid;
   display: grid;
   grid-gap: 3px;
   -ms-grid-columns: (1fr)[8];
       grid-template-columns: repeat(8, 1fr);
-  -ms-grid-rows: 40px 200px 40px;
-      grid-template-rows: 40px 200px 40px;
+  -ms-grid-rows: 40px auto 40px;
+      grid-template-rows: 40px auto 40px;
+  /*
+	* Rules:
+	1. It need to be a rectangle layout
+	2. Thd dots represents empty cell and it is only valid in the corners
+	*/
+      grid-template-areas: "m m h h h h h h" "m m c c c c c c" "m m f f f f f f";
 }
 
 .header2 {
-  grid-column: 3/-1;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 6;
+  grid-area: h;
 }
 
 .menu2 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
-  grid-column: 1/3;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1/3;
+  grid-area: m;
 }
 
 .content2 {
-  grid-column: 3/-1;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 6;
+  grid-area: c;
 }
 
 .footer2 {
-  grid-column: 1/-1;
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 6;
+  grid-area: f;
 }
 
 /*
@@ -318,6 +333,107 @@ For reversing the current layout
 	grid-column: 1/-1;
 }
 */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.outer-box {
+  margin: 10px;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 5px;
+  -ms-grid-columns: (100px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 100px);
+  -ms-grid-columns: (minmax(100px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-auto-rows: 100px;
+}
+
+.outer-box > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2em;
+  background-color: var(--bg-secondary);
+  color: var(--bg-primary);
+}
+
+.outer-box > div:nth-child(1n) {
+  background-color: var(--bg-secondary);
+}
+
+.outer-box > div:nth-child(3n) {
+  background-color: var(--bg-secondary);
+}
+
+.outer-box > div:nth-child(2n) {
+  background-color: var(--text-red);
+}
+
+.outer-box > div:nth-child(4n) {
+  background-color: var(--bg-primary-darker);
+}
+
+body,
+html {
+  background-color: var(--bg-primary);
+  height: 100%;
+}
+
+.container3 > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--bg-primary);
+  font-size: 2em;
+}
+
+.container3 {
+  margin: 10px;
+  display: -ms-grid;
+  display: grid;
+  gap: 5px;
+  -ms-grid-columns: [main-start] 1fr [content-start] 5fr [content-end main-end];
+      grid-template-columns: [main-start] 1fr [content-start] 5fr [content-end main-end];
+  -ms-grid-rows: [main-start] 40px [content-start] 400px [content-end] 40px [main-end];
+      grid-template-rows: [main-start] 40px [content-start] 400px [content-end] 40px [main-end];
+}
+
+.header3 {
+  background-color: var(--bg-secondary);
+  grid-column: main;
+}
+
+.menu3 {
+  background-color: var(--text-red);
+}
+
+.content3 {
+  background-color: var(--bg-secondary);
+  grid-area: content;
+}
+
+.footer3 {
+  background-color: var(--bg-primary-darker);
+  grid-column: main;
+}
+
 * {
   margin: 0;
   padding: 0;

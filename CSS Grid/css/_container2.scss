@@ -29,10 +29,22 @@ body {
 }
 
 .container2 {
+	height: 100vh;
 	display: grid;
 	grid-gap: 3px;
 	grid-template-columns: repeat(8, 1fr);
-	grid-template-rows: 40px 200px 40px;
+	grid-template-rows: 40px auto 40px;
+
+	//* Grid templates
+	/*
+	* Rules:
+	1. It need to be a rectangle layout
+	2. Thd dots represents empty cell and it is only valid in the corners
+	*/
+	grid-template-areas:
+		"m m h h h h h h"
+		"m m c c c c c c"
+		"m m f f f f f f";
 }
 
 .header2 {
@@ -43,20 +55,32 @@ body {
 	// //OR
 	// grid-column: 1 / span 2;
 	// //OR
-	grid-column: 3/-1;
+	// grid-column: 1/-1;
+
+	// * Using gird templates
+	grid-area: h;
 }
 
 .menu2 {
-	grid-column: 1/3;
-	grid-row: 1/3;
+	// grid-column: 1/3;
+	// grid-row: 2/3;
+
+	//* Using gird templates
+	grid-area: m;
 }
 
 .content2 {
-	grid-column: 3/-1;
+	// grid-column: 3/-1;
+
+	//* Using gird templates
+	grid-area: c;
 }
 
 .footer2 {
-	grid-column: 1/-1;
+	// grid-column: 1/-1;
+
+	//* Using gird templates
+	grid-area: f;
 }
 
 /*
