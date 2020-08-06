@@ -1,0 +1,53 @@
+// Sass type styling
+/* define variables for the primary colors */
+$bg-light: white;
+$bg-primary: #ffeead;
+$bg-primary-darker: #ffcc5c;
+$bg-secondary: #0dd3c9;
+$text-red: #ff6f69;
+$text-medium: 30px;
+
+body,
+html {
+	background-color: $bg-primary;
+}
+
+.container-4 {
+	font-size: $text-medium;
+	margin: 15px;
+	display: grid;
+	height: 100vh;
+	grid-template-columns: repeat(3, 100px);
+	grid-template-rows: repeat(2, 100px);
+	gap: 5px;
+	color: $bg-primary;
+	border: 1px solid black;
+
+	//* GRID justify content (along X-axis)
+	//* default property is "start"
+	justify-content: center;
+	justify-content: space-between;
+	justify-content: space-evenly;
+	justify-content: space-around;
+
+	//* GRID align content (along Y-axis)
+	//* default property is "start"
+	//align-content: center;
+}
+
+.container-4 > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container-4 > div:nth-child(even) {
+	background-color: $bg-secondary;
+}
+.container-4 > div:nth-child(odd) {
+	background-color: $text-red;
+}
+
+.container-4 > div:nth-child(4) {
+	background-color: $bg-primary-darker;
+}

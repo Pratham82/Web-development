@@ -1,0 +1,55 @@
+body,
+html {
+	background-color: var(--bg-primary);
+}
+
+.container6 {
+	margin: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.container6 > div {
+	border: 1px solid black;
+	display: grid;
+	gap: 5px;
+	color: var(--bg-primary);
+	font-size: 30px;
+}
+h1 {
+	margin-top: 50px;
+}
+.auto-fit {
+	display: flex;
+
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	grid-template-rows: 100px 100px;
+}
+
+.auto-fit > div {
+	justify-content: center;
+	align-items: center;
+}
+.auto-fill {
+	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+	grid-template-rows: 100px 100px;
+}
+
+.auto-fit > div:nth-child(odd) {
+	background-color: var(--bg-secondary);
+}
+.auto-fit > div:nth-child(2) {
+	background-color: var(--text-red);
+}
+.auto-fill > div:nth-child(odd) {
+	background-color: var(--bg-secondary);
+}
+.auto-fill > div:nth-child(2) {
+	background-color: var(--text-red);
+}
+.auto-fit > div:nth-child(4) {
+	background-color: var(--bg-primary-darker);
+}
+.auto-fill > div:nth-child(4) {
+	background-color: var(--bg-primary-darker);
+}
