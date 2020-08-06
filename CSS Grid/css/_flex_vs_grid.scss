@@ -1,0 +1,89 @@
+.container7 {
+	margin: 15px;
+}
+
+.flex-header {
+	display: flex;
+	justify-content: start;
+	background-color: var(--bg-secondary);
+	font-size: 25px;
+	padding: 5px;
+	margin: 5px;
+	border-radius: 5px;
+	color: var(--bg-primary);
+}
+
+.flex-header > div {
+	margin: 0 20px;
+}
+.flex-header > div:nth-child(3) {
+	margin-left: auto;
+}
+
+.grid-container {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 50px 400px 50px;
+	gap: 2px;
+
+	font-size: 25px;
+	padding: 5px;
+	margin: 5px;
+	text-align: center;
+	color: var(--bg-primary);
+}
+
+.grid-container > div {
+	// display: flex;
+	// justify-content: center;
+	// align-items: center;
+	padding: 10px 20px;
+}
+
+.Header {
+	grid-column: 1/-1;
+	background-color: var(--bg-secondary);
+	display: flex;
+}
+
+.Header > div {
+	margin: 0px 10px;
+}
+
+.Header > div:nth-child(3) {
+	margin-left: auto;
+}
+
+.Menu {
+	grid-column: 1/4;
+	background-color: var(--text-red);
+}
+
+.Content {
+	grid-column: 4/-1;
+	background-color: var(--bg-primary-darker);
+}
+
+.Footer {
+	grid-column: 1/-1;
+	background-color: var(--bg-secondary);
+}
+
+/*
+* Difference: 
+* Flexbox takes basis in the content, means (Content first)
+* Grid takes basis in the layout, means it concentrates on the (Layout first)
+
+* Flex:
+* 1. Built for 1D layouts
+* 2. If your layout has direction, either row or column then use flexbox. 
+* 3. It is better for aligning components inside the container 
+
+*Grid:
+* 1. Built for 2D layouts
+* 2. If you are going to create more overall layout with both rows and columns then you should use CSS Grid
+
+
+
+*/
