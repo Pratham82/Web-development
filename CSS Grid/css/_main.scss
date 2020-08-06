@@ -46,3 +46,18 @@ li:hover {
 	transform: scale(1.025);
 	cursor: pointer;
 }
+
+#article {
+	grid-column: 1/-1;
+	background-color: var(--text-red);
+}
+
+#image-grid {
+	background-color: var(--text-red);
+	grid-column: 1/-1;
+}
+
+#flex-vs-grid {
+	grid-column: 1/-1;
+	background-color: var(--bg-primary-darker);
+}

@@ -187,6 +187,21 @@ li:hover {
   cursor: pointer;
 }
 
+#article {
+  grid-column: 1/-1;
+  background-color: var(--text-red);
+}
+
+#image-grid {
+  background-color: var(--text-red);
+  grid-column: 1/-1;
+}
+
+#flex-vs-grid {
+  grid-column: 1/-1;
+  background-color: var(--bg-primary-darker);
+}
+
 .container > div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -434,6 +449,293 @@ html {
   grid-column: main;
 }
 
+/* define variables for the primary colors */
+body,
+html {
+  background-color: #ffeead;
+}
+
+.container-4 {
+  font-size: 30px;
+  margin: 15px;
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  -ms-grid-columns: (100px)[3];
+      grid-template-columns: repeat(3, 100px);
+  -ms-grid-rows: (100px)[2];
+      grid-template-rows: repeat(2, 100px);
+  gap: 5px;
+  color: #ffeead;
+  border: 1px solid black;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.container-4 > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-4 > div:nth-child(even) {
+  background-color: #0dd3c9;
+}
+
+.container-4 > div:nth-child(odd) {
+  background-color: #ff6f69;
+}
+
+.container-4 > div:nth-child(4) {
+  background-color: #ffcc5c;
+}
+
+html,
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container5 {
+  display: -ms-grid;
+  display: grid;
+  height: 100%;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: 50px auto 50px;
+      grid-template-rows: 50px auto 50px;
+  margin: 15px;
+  gap: 5px;
+  color: var(--bg-primary);
+  font-size: 25px;
+}
+
+.container5 > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header5 {
+  background-color: var(--bg-secondary);
+  grid-column: span 3;
+  grid-column: 1/-1;
+}
+
+.menu5 {
+  background-color: var(--text-red);
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+}
+
+.content5 {
+  background-color: var(--bg-secondary);
+  grid-column: 3/-1;
+}
+
+.footer5 {
+  background-color: var(--bg-primary-darker);
+  grid-column: 1/-1;
+}
+
+body,
+html {
+  background-color: var(--bg-primary);
+}
+
+.container6 {
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container6 > div {
+  border: 1px solid black;
+  display: -ms-grid;
+  display: grid;
+  gap: 5px;
+  color: var(--bg-primary);
+  font-size: 30px;
+}
+
+h1 {
+  margin-top: 50px;
+}
+
+.auto-fit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-columns: (minmax(100px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  -ms-grid-rows: 100px 100px;
+      grid-template-rows: 100px 100px;
+}
+
+.auto-fit > div {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.auto-fill {
+  -ms-grid-columns: (minmax(100px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  -ms-grid-rows: 100px 100px;
+      grid-template-rows: 100px 100px;
+}
+
+.auto-fit > div:nth-child(odd) {
+  background-color: var(--bg-secondary);
+}
+
+.auto-fit > div:nth-child(2) {
+  background-color: var(--text-red);
+}
+
+.auto-fill > div:nth-child(odd) {
+  background-color: var(--bg-secondary);
+}
+
+.auto-fill > div:nth-child(2) {
+  background-color: var(--text-red);
+}
+
+.auto-fit > div:nth-child(4) {
+  background-color: var(--bg-primary-darker);
+}
+
+.auto-fill > div:nth-child(4) {
+  background-color: var(--bg-primary-darker);
+}
+
+.container7 {
+  margin: 15px;
+}
+
+.flex-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  background-color: var(--bg-secondary);
+  font-size: 25px;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  color: var(--bg-primary);
+}
+
+.flex-header > div {
+  margin: 0 20px;
+}
+
+.flex-header > div:nth-child(3) {
+  margin-left: auto;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: 50px 400px 50px;
+      grid-template-rows: 50px 400px 50px;
+  gap: 2px;
+  font-size: 25px;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  color: var(--bg-primary);
+}
+
+.grid-container > div {
+  padding: 10px 20px;
+}
+
+.Header {
+  grid-column: 1/-1;
+  background-color: var(--bg-secondary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Header > div {
+  margin: 0px 10px;
+}
+
+.Header > div:nth-child(3) {
+  margin-left: auto;
+}
+
+.Menu {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  background-color: var(--text-red);
+}
+
+.Content {
+  grid-column: 4/-1;
+  background-color: var(--bg-primary-darker);
+}
+
+.Footer {
+  grid-column: 1/-1;
+  background-color: var(--bg-secondary);
+}
+
+/*
+* Difference: 
+* Flexbox takes basis in the content, means (Content first)
+* Grid takes basis in the layout, means it concentrates on the (Layout first)
+
+* Flex:
+* 1. Built for 1D layouts
+* 2. If your layout has direction, either row or column then use flexbox. 
+* 3. It is better for aligning components inside the container 
+
+*Grid:
+* 1. Built for 2D layouts
+* 2. If you are going to create more overall layout with both rows and columns then you should use CSS Grid
+
+
+
+*/
 * {
   margin: 0;
   padding: 0;
